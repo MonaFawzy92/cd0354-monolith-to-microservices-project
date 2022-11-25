@@ -1,0 +1,31 @@
+language: node_js
+node_js:
+  - 12
+
+services:
+  - docker
+
+# Pre-testing installs
+install:
+  - echo "nothing needs to be installed"
+
+# Scripts to be run such as tests
+before_script:
+  - echo "no tests"
+
+script:
+  #- docker --version # print the version for logging
+  #- docker build -t simple-node .
+  #- docker tag simple-node YOUR_DOCKER_HUB/simple-node:latest
+  # Make sure the Docker services are running in your local machine
+  # Remove unused and dangling images
+  # - docker image prune --all
+  - docker-compose -f docker-compose-build.yaml build --parallel
+  # - docker-compose -f docker-compose-build.yaml push
+
+after_success:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker push monaahmed/simplereverseproxy:1.0
+  - docker push monaahmed/udagram-api-feed:1.0
+  - docker push monaahmed/udagram-api-user:1.0
+  - docker push monaahmed/udagram-frontend:v2
