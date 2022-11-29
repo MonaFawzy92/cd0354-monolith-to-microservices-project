@@ -3,15 +3,15 @@ services:
   reverseproxy:
     build:
       context: ./udagram-reverseproxy
-    image: monaahmed/reverseproxy:v2
+    image: monaahmed/simplereverseproxy:1.0
   backend_user:
     build:
       context: ./udagram-api-user
-    image: monaahmed/udagram-api-user:v2
+    image: monaahmed/udagram-api-user:1.0
   backend_feed:
     build:
       context: ./udagram-api-feed
-    image: monaahmed/udagram-api-feed:v2
+    image: monaahmed/udagram-api-feed:1.0
   frontend:
     build:
       context: ./udagram-frontend
