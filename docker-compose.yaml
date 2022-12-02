@@ -1,7 +1,7 @@
 version: "3"
 services:
   reverseproxy:
-    image: monaahmed/simplereverseproxy:1.0
+    image: monaahmed/reverseproxy:1.0
     ports:
       - 8080:8080
     restart: always
@@ -35,6 +35,6 @@ services:
       JWT_SECRET: $JWT_SECRET
       URL: "http://localhost:8100"
   frontend:
-    image: monaahmed/udagram-frontend:v2
+    image: monaahmed/udagram-frontend:1.0
     ports:
       - "8100:80"
