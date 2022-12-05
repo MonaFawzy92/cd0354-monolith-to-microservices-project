@@ -27,10 +27,10 @@ spec:
           resources:
             requests:
               memory: "64Mi"
-              cpu: "250m"
+              cpu: "550m"
             limits:
-              memory: "1024Mi"
-              cpu: "250m"
+              memory: "2024Mi"
+              cpu: "650m"
           volumeMounts:
             - name: aws-secret
               mountPath: /root/.aws/

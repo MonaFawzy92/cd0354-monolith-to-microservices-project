@@ -15,7 +15,7 @@ spec:
         app: reverseproxy
     spec:
       containers:
-        - image: monaahmed/reverseproxy:1.0
+        - image: monaahmed/reverseproxy:1.2
           name: reverseproxy
           imagePullPolicy: Always
           # resources:
