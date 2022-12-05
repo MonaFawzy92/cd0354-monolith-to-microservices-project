@@ -15,4 +15,4 @@ services:
   frontend:
     build:
       context: ./udagram-frontend
-    image: monaahmed/udagram-frontend:1.1
+    image: monaahmed/udagram-frontend:1.6

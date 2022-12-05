@@ -28,4 +28,4 @@ after_success:
   - docker push monaahmed/reverseproxy:1.2
   - docker push monaahmed/udagram-api-feed:1.0
   - docker push monaahmed/udagram-api-user:1.0
-  - docker push monaahmed/udagram-frontend:1.0
+  - docker push monaahmed/udagram-frontend:1.6
