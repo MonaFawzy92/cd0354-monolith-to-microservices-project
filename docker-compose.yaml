@@ -1,7 +1,7 @@
 version: "3"
 services:
   reverseproxy:
-    image: monaahmed/reverseproxy:1.1
+    image: monaahmed/reverseproxy:1.2
     ports:
       - 8080:8080
     restart: always
